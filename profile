@@ -54,6 +54,10 @@ alias hg='~/hgenv/bin/hg'
 # Use MacVim bundled vim
 alias vim="~/bin/mvim -v"
 
+function bin-diff {
+  diff -u <( xxd -g1 $1) <( xxd -g1 $2)
+}
+
 ##
 # Your previous /Users/andrew/.profile file was backed up as /Users/andrew/.profile.macports-saved_2009-06-02_at_17:43:18
 ##
