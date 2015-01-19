@@ -54,8 +54,14 @@ alias hg='~/hgenv/bin/hg'
 # Use MacVim bundled vim
 alias vim="~/bin/mvim -v"
 
+# binary diff function.
 function bin-diff {
   diff -u <( xxd -g1 $1) <( xxd -g1 $2)
+}
+
+# use terminal-notifier to show message
+function tnorify {
+  terminal-notifier -activate com.googlecode.iterm2 -title "Terminal" -subtitle  -message "$@"
 }
 
 ##
