@@ -64,6 +64,12 @@ function tnorify {
   terminal-notifier -activate com.googlecode.iterm2 -title "Terminal" -subtitle  -message "$@"
 }
 
+# use thunderbird to send attachment file.
+send-attach ()
+{
+  open -a /Applications/Thunderbird.app/ $*
+}
+
 ##
 # Your previous /Users/andrew/.profile file was backed up as /Users/andrew/.profile.macports-saved_2009-06-02_at_17:43:18
 ##
