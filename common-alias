@@ -1,0 +1,13 @@
+# enable bd script
+alias bd=". ~/bin/bd -s"
+
+# alias for kdiff
+alias kdiff="/Applications/kdiff3.app/Contents/MacOS/kdiff3"
+
+# Use MacHg bundled command line hg program.
+#alias hg='/Applications/MacHg.app/Contents/Resources/localhg'
+# Use virtualenv created hg program.
+alias hg='~/hgenv/bin/hg'
+
+# Use MacVim bundled vim
+alias vim="~/bin/mvim -v"

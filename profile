@@ -19,6 +19,10 @@ export LESS="-M"
 # enable GCC 4.9.0 color in diagnostics.
 export GCC_COLORS="error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01"
 
+# load common alias settings
+. ~/dotfiles/common-alias
+
+# bash only aliases
 #alias ls="gls -FG --color=auto"
 alias ls="ls -FG"
 alias grep="grep --color=auto"
@@ -39,20 +43,6 @@ if [ -f /opt/local/share/git/git-prompt.sh ]; then
   . /opt/local/share/git/git-prompt.sh
   PS1='\[\e[01;32m\]\u@\h\[\e[00m\]:\[\e[01;34m\]\W\[\e[01;35m\]$(__git_ps1)\[\e[00m\]\$ '
 fi
-
-# enable bd script
-alias bd=". ~/bin/bd -s"
-
-# alias for kdiff
-alias kdiff="/Applications/kdiff3.app/Contents/MacOS/kdiff3"
-
-# Use MacHg bundled command line hg program.
-#alias hg='/Applications/MacHg.app/Contents/Resources/localhg'
-# Use virtualenv created hg program.
-alias hg='~/hgenv/bin/hg'
-
-# Use MacVim bundled vim
-alias vim="~/bin/mvim -v"
 
 # binary diff function.
 function bin-diff {
