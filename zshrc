@@ -4,6 +4,10 @@ export ZSH=$HOME/.oh-my-zsh
 # zsh-completions
 fpath=(/opt/local/share/zsh/site-functions $fpath)
 
+if [ -f /opt/local/etc/profile.d/autojump.zsh ]; then
+    . /opt/local/etc/profile.d/autojump.zsh
+fi
+
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
@@ -48,7 +52,7 @@ ZSH_THEME="robbyrussell"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git)
+plugins=(git autojump)
 
 # User configuration
 
