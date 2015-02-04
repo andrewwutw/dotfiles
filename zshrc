@@ -1,9 +1,6 @@
 # Path to your oh-my-zsh installation.
 export ZSH=$HOME/.oh-my-zsh
 
-# load common alias settings
-. ~/dotfiles/common-alias
-
 # zsh-completions
 fpath=(/opt/local/share/zsh/site-functions $fpath)
 
@@ -85,6 +82,13 @@ source $ZSH/oh-my-zsh.sh
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
 # For a full list of active aliases, run `alias`.
 #
+
+# load common variable settings
+. ~/dotfiles/common-setting
+
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+
+# load common alias settings
+. ~/dotfiles/common-alias

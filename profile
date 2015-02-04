@@ -14,10 +14,8 @@ PATH=$PATH:~/bin
 
 PS1='\[\e[01;32m\]\u@\h\[\e[00m\]:\[\e[01;34m\]\W\[\e[00m\]\$ '
 
-export LESS="-M"
-
-# enable GCC 4.9.0 color in diagnostics.
-export GCC_COLORS="error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01"
+# load common variable settings
+. ~/dotfiles/common-setting
 
 # load common alias settings
 . ~/dotfiles/common-alias
