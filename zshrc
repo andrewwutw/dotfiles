@@ -92,3 +92,6 @@ source $ZSH/oh-my-zsh.sh
 
 # load common alias settings
 . ~/dotfiles/common-alias
+
+# load common function settings
+. ~/dotfiles/common-func

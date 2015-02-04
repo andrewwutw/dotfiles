@@ -1,0 +1,15 @@
+# binary diff function.
+function bin-diff {
+  diff -u <( xxd -g1 $1) <( xxd -g1 $2)
+}
+
+# use terminal-notifier to show message
+function tnorify {
+  terminal-notifier -activate com.googlecode.iterm2 -title "Terminal" -subtitle  -message "$@"
+}
+
+# use thunderbird to send attachment file.
+send-attach ()
+{
+  open -a /Applications/Thunderbird.app/ $*
+}

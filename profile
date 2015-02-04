@@ -25,6 +25,9 @@ PS1='\[\e[01;32m\]\u@\h\[\e[00m\]:\[\e[01;34m\]\W\[\e[00m\]\$ '
 alias ls="ls -FG"
 alias grep="grep --color=auto"
 
+# load common function settings
+. ~/dotfiles/common-func
+
 # enable bash completion if using MacPorts bash. (version >= 4)
 if [[ "$BASH_VERSINFO" -gt "3" ]]; then
   # https://trac.macports.org/wiki/howto/bash-completion
@@ -41,22 +44,6 @@ if [ -f /opt/local/share/git/git-prompt.sh ]; then
   . /opt/local/share/git/git-prompt.sh
   PS1='\[\e[01;32m\]\u@\h\[\e[00m\]:\[\e[01;34m\]\W\[\e[01;35m\]$(__git_ps1)\[\e[00m\]\$ '
 fi
-
-# binary diff function.
-function bin-diff {
-  diff -u <( xxd -g1 $1) <( xxd -g1 $2)
-}
-
-# use terminal-notifier to show message
-function tnorify {
-  terminal-notifier -activate com.googlecode.iterm2 -title "Terminal" -subtitle  -message "$@"
-}
-
-# use thunderbird to send attachment file.
-send-attach ()
-{
-  open -a /Applications/Thunderbird.app/ $*
-}
 
 ##
 # Your previous /Users/andrew/.profile file was backed up as /Users/andrew/.profile.macports-saved_2009-06-02_at_17:43:18
