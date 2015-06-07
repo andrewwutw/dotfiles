@@ -9,5 +9,7 @@ alias kdiff="/Applications/kdiff3.app/Contents/MacOS/kdiff3"
 # Use virtualenv created hg program.
 alias hg='~/hgenv/bin/hg'
 
-# Use MacVim bundled vim
-alias vim="~/bin/mvim -v"
+# Use MacVim bundled vim if possibile.
+if [ -x ~/bin/mvim  ]; then
+  alias vim="~/bin/mvim -v"
+fi
