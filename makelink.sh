@@ -1,4 +1,4 @@
-#! /bin/bash
+#!/usr/bin/env bash
 DOTFILES="
   ackrc gitconfig gitignore_global hgignore_global hgrc
   profile zshrc
