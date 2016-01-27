@@ -3,7 +3,7 @@
 	email = arw@dmp.com.tw
 [core]
         pager = less -FSRXM
-	excludesfile = /Users/andrew/.gitignore_global
+	excludesfile = ~/.gitignore_global
 [color]
 	ui = auto
 [mergetool "kdiff3"]
