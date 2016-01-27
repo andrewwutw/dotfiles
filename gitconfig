@@ -4,7 +4,6 @@
 [core]
         pager = less -FSRXM
 	excludesfile = /Users/andrew/.gitignore_global
-	editor = ~/bin/mvim -v
 [color]
 	ui = auto
 [mergetool "kdiff3"]
