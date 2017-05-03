@@ -95,3 +95,8 @@ source $ZSH/oh-my-zsh.sh
 
 # load common function settings
 . ~/dotfiles/common-func
+
+# Setup keybindings for OSX home/end key.
+# http://stackoverflow.com/questions/8638012/fix-key-settings-home-end-insert-delete-in-zshrc-when-running-zsh-in-terminat
+bindkey  "^[[H"   beginning-of-line
+bindkey  "^[[F"   end-of-line
