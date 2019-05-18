@@ -86,6 +86,9 @@ source $ZSH/oh-my-zsh.sh
 # load common variable settings
 . ~/dotfiles/common-setting
 
+# setup dircolrs
+eval $(dircolors -b $HOME/.dircolors)
+
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
