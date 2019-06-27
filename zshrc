@@ -89,6 +89,14 @@ source $ZSH/oh-my-zsh.sh
 # setup dircolrs
 eval $(dircolors -b $HOME/.dircolors)
 
+# setup macports fzf
+if [[ -d /opt/local/share/fzf/shell ]]; then
+  . /opt/local/share/fzf/shell/key-bindings.zsh
+fi
+if [[ -f /opt/local/share/zsh/site-functions/fzf ]]; then
+  . /opt/local/share/zsh/site-functions/fzf
+fi
+
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
