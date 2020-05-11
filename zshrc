@@ -92,7 +92,9 @@ PROMPT+='%{$fg[cyan]%}%c%{$reset_color%} $(git_prompt_info)'
 . ~/dotfiles/common-setting
 
 # setup dircolrs
-eval $(dircolors -b $HOME/.dircolors)
+if which dircolors >/dev/null ;then
+  eval $(dircolors -b $HOME/.dircolors)
+fi
 
 # setup macports fzf
 if [[ -d /opt/local/share/fzf/shell ]]; then
