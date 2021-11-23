@@ -1,3 +1,10 @@
+# more info for common commands
+alias mkdir='mkdir -v'
+alias mv='mv -v'
+alias cp='cp -v'
+alias rm='rm -v'
+alias ln='ln -v'
+
 # enable bd script
 alias bd=". ~/bin/bd -s"
 
