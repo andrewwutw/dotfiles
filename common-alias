@@ -5,6 +5,12 @@ alias cp='cp -v'
 alias rm='rm -v'
 alias ln='ln -v'
 
+# support for exa
+if which exa > /dev/null ; then
+  alias e='exa -F'
+  alias el='exa -F -l --time-style=long-iso'
+fi
+
 # enable bd script
 alias bd=". ~/bin/bd -s"
 
