@@ -57,6 +57,11 @@ ZSH_THEME="robbyrussell"
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(git macos gnu-utils vagrant)
 
+#if [ -d ~/.oh-my-zsh/custom//plugins/zsh-z ]; then
+if [ -d ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-z ]; then
+    plugins+=(zsh-z)
+fi
+
 # User configuration
 
 export PATH="/opt/local/bin:/opt/local/sbin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/go/bin:/Users/andrew/bin"
