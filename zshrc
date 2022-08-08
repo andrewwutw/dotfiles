@@ -122,6 +122,12 @@ fi
 # load common function settings
 . ~/dotfiles/common-func
 
+# setup for nvm
+# https://github.com/nvm-sh/nvm#manual-install
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
 # Setup keybindings for OSX home/end key.
 # http://stackoverflow.com/questions/8638012/fix-key-settings-home-end-insert-delete-in-zshrc-when-running-zsh-in-terminat
 bindkey  "^[[H"   beginning-of-line
