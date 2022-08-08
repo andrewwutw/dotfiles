@@ -55,11 +55,16 @@ ZSH_THEME="robbyrussell"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git macos gnu-utils vagrant)
+plugins+=(git macos gnu-utils vagrant)
 
 #if [ -d ~/.oh-my-zsh/custom//plugins/zsh-z ]; then
 if [ -d ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-z ]; then
     plugins+=(zsh-z)
+fi
+
+if [[ -d /opt/local/share/fzf/shell ]]; then
+  export FZF_BASE=/opt/local/share/fzf/shell/
+  plugins+=(fzf)
 fi
 
 # User configuration
