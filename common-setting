@@ -3,6 +3,10 @@ export LESS="-M"
 # enable GCC 4.9.0 color in diagnostics.
 export GCC_COLORS="error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01"
 
+# setup BAT pager style.
+# https://github.com/sharkdp/bat
+export BAT_STYLE=plain
+
 if [ -x ~/bin/mvim  ]; then
   # Use MacVim bundled vim for editor if possibile.
   export VISUAL=~"/bin/mvim -v"
