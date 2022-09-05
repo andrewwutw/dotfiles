@@ -92,7 +92,12 @@ source $ZSH/oh-my-zsh.sh
 
 # override zsh prompt, add hostname.
 PROMPT="%(?:%{$fg_bold[green]%}➜ :%{$fg_bold[red]%}➜ )"
-PROMPT+=' %{$fg[yellow]%}%m:'
+# set special color for special host name.
+if [[ "`hostname`" == "mac-mini-2019.local" ]]; then
+  PROMPT+=' %{$fg[green]%}%{$bg[red]%}%m:'
+else
+  PROMPT+=' %{$fg[yellow]%}%m:'
+fi
 PROMPT+='%{$fg[cyan]%}%c%{$reset_color%} $(git_prompt_info)'
 
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
