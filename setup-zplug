@@ -1,0 +1,21 @@
+# Install zplug :
+if ! [ -f ~/.zplug/init.zsh ]; then
+  echo "Install zplug:"
+  git clone https://github.com/zplug/zplug ~/.zplug
+  if ! [ -f ~/.zplug/init.zsh ]; then
+    echo "Install zplug failed!"
+    return 1
+  fi
+fi
+
+source ~/.zplug/init.zsh
+
+# Packages to install :
+zplug "agkozak/zsh-z"
+
+#
+if ! zplug check --verbose; then
+  zplug install
+fi
+zplug load
+

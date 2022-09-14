@@ -57,11 +57,6 @@ ZSH_THEME="robbyrussell"
 # Add wisely, as too many plugins slow down shell startup.
 plugins+=(git macos gnu-utils vagrant)
 
-#if [ -d ~/.oh-my-zsh/custom//plugins/zsh-z ]; then
-if [ -d ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-z ]; then
-    plugins+=(zsh-z)
-fi
-
 if [[ -d /opt/local/share/fzf/shell ]]; then
   export FZF_BASE=/opt/local/share/fzf/shell/
   plugins+=(fzf)
@@ -142,3 +137,7 @@ export NVM_DIR="$HOME/.nvm"
 # http://stackoverflow.com/questions/8638012/fix-key-settings-home-end-insert-delete-in-zshrc-when-running-zsh-in-terminat
 bindkey  "^[[H"   beginning-of-line
 bindkey  "^[[F"   end-of-line
+
+# Setup zplug :
+source ~/dotfiles/setup-zplug
+
