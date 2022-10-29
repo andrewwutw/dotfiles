@@ -61,8 +61,10 @@ if [[ $OSTYPE == 'darwin'* ]]; then
   plugins+=(macos)
 fi
 
-if [[ -d /opt/local/share/fzf/shell ]]; then
-  export FZF_BASE=/opt/local/share/fzf/shell/
+if which fzf >/dev/null ;then
+  if [[ -d /opt/local/share/fzf/shell ]]; then
+    export FZF_BASE=/opt/local/share/fzf/shell/
+  fi
   plugins+=(fzf)
 fi
 
