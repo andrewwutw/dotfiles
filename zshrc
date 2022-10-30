@@ -118,9 +118,7 @@ fi
 # setup macports fzf
 if [[ -d /opt/local/share/fzf/shell ]]; then
   . /opt/local/share/fzf/shell/key-bindings.zsh
-fi
-if [[ -f /opt/local/share/zsh/site-functions/fzf ]]; then
-  . /opt/local/share/zsh/site-functions/fzf
+  . /opt/local/share/fzf/shell/completion.zsh
 fi
 
 # Example aliases
