@@ -62,9 +62,6 @@ if [[ $OSTYPE == 'darwin'* ]]; then
 fi
 
 if which fzf >/dev/null ;then
-  if [[ -d /opt/local/share/fzf/shell ]]; then
-    export FZF_BASE=/opt/local/share/fzf/shell/
-  fi
   plugins+=(fzf)
 fi
 
@@ -113,12 +110,6 @@ PROMPT+='%{$fg[cyan]%}%c%{$reset_color%} $(git_prompt_info)'
 # setup dircolrs
 if which dircolors >/dev/null ;then
   eval $(dircolors -b $HOME/.dircolors)
-fi
-
-# setup macports fzf
-if [[ -d /opt/local/share/fzf/shell ]]; then
-  . /opt/local/share/fzf/shell/key-bindings.zsh
-  . /opt/local/share/fzf/shell/completion.zsh
 fi
 
 # Example aliases
