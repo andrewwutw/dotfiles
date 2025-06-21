@@ -93,6 +93,8 @@ PROMPT="%(?:%{$fg_bold[green]%}➜ :%{$fg_bold[red]%}➜ )"
 # set special color for special host name.
 if [[ "`hostname`" == "mac-mini-2019.local" ]]; then
   PROMPT+=' %{$fg[green]%}%{$bg[red]%}%m:'
+elif [[ "`hostname`" == "M4-Max-MBP.local" ]]; then
+  PROMPT+=' %{$fg[green]%}%m:'
 else
   PROMPT+=' %{$fg[yellow]%}%m:'
 fi
