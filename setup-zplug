@@ -13,6 +13,12 @@ source ~/.zplug/init.zsh
 # Packages to install :
 zplug "agkozak/zsh-z"
 zplug "zsh-users/zsh-syntax-highlighting", defer:2
+# install zsh-nvm plugin for MacOS
+if [ "$(uname -s)" = "Darwin" ]; then
+  export NVM_COMPLETION=true
+  export NVM_LAZY_LOAD=true
+  zplug "lukechilds/zsh-nvm"
+fi
 
 #
 if ! zplug check --verbose; then
