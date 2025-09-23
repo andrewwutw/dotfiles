@@ -97,6 +97,8 @@ elif [[ "`hostname`" == "m3-512g-4tb.local" ]]; then
   PROMPT+=' %{$fg[green]%}%m:'
 elif [[ "`hostname`" == "m3-512g-8tb.local" ]]; then
   PROMPT+=' %{$fg[green]%}%m:'
+elif [[ "`hostname`" == "m3-512g-8tb-2.local" ]]; then
+  PROMPT+=' %{$fg[green]%}%m:'
 elif [[ "`hostname`" == "M4-Max-MBP.local" ]]; then
   PROMPT+=' %{$fg[green]%}%m:'
 else
