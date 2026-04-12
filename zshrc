@@ -141,3 +141,10 @@ bindkey  "^[[F"   end-of-line
 # Setup zplug :
 source ~/dotfiles/setup-zplug
 
+# For Google Antigravity
+local agy_path="$HOME/.antigravity/antigravity/bin"
+if [[ -d "$agy_path" ]]; then
+    alias agy="$agy_path/agy"
+    alias antigravity="$agy_path/antigravity"
+fi
+
