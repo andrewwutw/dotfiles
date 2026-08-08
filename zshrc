@@ -148,3 +148,6 @@ if [[ -d "$agy_path" ]]; then
     alias antigravity="$agy_path/antigravity"
 fi
 
+# Load local settings.
+[ -f "$HOME/.zshrc.local" ] && source "$HOME/.zshrc.local"
+
