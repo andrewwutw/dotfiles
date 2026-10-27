@@ -154,6 +154,7 @@ if (( $+commands[bat] )); then
     local name="${@[-1]:-stdin}"
     command bat --pager="less -R -K -PM'${name} lines %lt-%lb/%L %pB\%'" "$@"
   }
+  alias cat='bat --paging=never'
 elif [[ "$OSTYPE" == darwin* ]]; then
   echo "沒有安裝 bat pager，可以用 MacPorts 安裝：sudo port install bat"
 fi
